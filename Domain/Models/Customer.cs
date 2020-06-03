@@ -1,11 +1,10 @@
-﻿using NorthWind.Domain.Interfaces;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace NorthWind.Domain.Models
 {
     using Interfaces;
-    using System.ComponentModel.DataAnnotations.Schema;
-
+    
     public class Customer : IEntity<int>
     {
         [Key]

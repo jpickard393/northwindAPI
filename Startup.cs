@@ -15,6 +15,7 @@ using NorthWind.Domain.Models;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using NorthWind.Domain.Interfaces;
 using NorthWind.Services;
+using NuGet.Frameworks;
 
 namespace NorthWind
 {
@@ -44,6 +45,7 @@ namespace NorthWind
             services.AddDbContext<NorthWindContext>(opt => opt.UseSqlServer(Configuration["ConnectionString:NorthWind"]));
             services.AddControllers();
             services.AddTransient<ICustomerService, CustomerService>();
+            services.AddTransient<IProductService, ProductService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
